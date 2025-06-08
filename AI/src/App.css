@@ -1,0 +1,202 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif, system-ui;
+}
+
+body {
+  background-color: #010813;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2rem auto;
+  align-items: center;
+  line-height: 1.8;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+/* App name section */
+.app-name {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.app-name div {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(236, 213, 213, 0.08);
+}
+
+.app-name span {
+  font-family: cursive;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+/* Headings */
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #f0e9e9;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #b3abab;
+}
+
+/* Chat section */
+.chat-container {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #534949;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.chatConversations {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 1rem;
+}
+
+.chat-prompt {
+  align-self: flex-end;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat-response {
+  align-self: flex-start;
+  background-color: #e0e7ff;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  color: #333;
+}
+
+/* Clear Chat button */
+.chat-container button {
+  background-color: rgb(205, 56, 56);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.chat-container button:hover {
+  background-color: rgb(180, 40, 40);
+  opacity: 0.9;
+}
+
+/* Search bar */
+.searchBar-container {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #0f0101;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  height: 10rem;
+  padding: 1rem;
+  font-size: inherit;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  resize: none;
+}
+
+/* Send button */
+.searchBar button {
+  background-color: rgb(63, 128, 226);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  height: 2.5em;
+  padding: 0 2em;
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searchBar button:disabled {
+  background-color: rgb(162, 192, 238);
+  cursor: not-allowed;
+}
+
+.searchBar button:hover:not(:disabled) {
+  opacity: 0.95;
+}
+
+/* General button styling */
+button {
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .chat-container,
+  .searchBar-container {
+    width: 100%;
+  }
+
+  .searchBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBar button {
+    width: 100%;
+  }
+}
